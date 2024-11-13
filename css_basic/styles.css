@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    flex-direction: column;
+    border: 1px ;
+    border-style: solid;
+    border-color: black;
+    flex: auto;
+    overflow-y: auto;
+    overflow-x: auto;
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+a {
+    align-items: center;
+}
+aside {
+    flex: 1;
+    
+
+}
+article {
+    flex: 2;
+}
+
+@media screen and (max-width: 768px){
+    header {
+        color:red;
+    }
+    aside {
+        flex: auto;
+        overflow-y: auto;
+    }
+    article {
+        flex: auto;
+        overflow-y: auto;
+    }
+    main {
+        flex-direction: column;
+    }
+    body {
+        border:none;
+        display: grid;
+    }
+}
+@media screen and (max-width: 1024px){
+    body 
+    {
+        font-size: 25px;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        border: none;
+    }
+    main{
+        display: grid;
+    }
+
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  #sun
+ {
+    animation:spin 5s linear infinite;
+   
+ }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(90deg); }
+    50%{ transform: rotate(180deg);}
+    75%{ transform: rotate(270deg);}
+    100%{transform: rotate(360deg);}
+  }
+#earth {
+    position:fixed;
+    align-items: center;
+}
